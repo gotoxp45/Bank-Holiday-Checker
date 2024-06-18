@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            fetch(`http://localhost:3000/bank`)
+            .then(function (response) {
+               console.log(response.json()); 
+            })
+            .catch(function (error) {
+              console.log(error);
+              alert(
+                "An error occurred while checking the holiday. Please try again later."
+              );
+            });
+        });
+        
+    </script>
+</body>
+</html>
